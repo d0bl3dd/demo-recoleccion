@@ -21,7 +21,7 @@ header {
     font-size: 22px;
     font-weight: bold;
     letter-spacing: 1px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 /* LAYOUT */
@@ -38,20 +38,20 @@ header {
     background: radial-gradient(circle, #f8fafc, #dfe9f3);
     border-radius: 15px;
     position: relative;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     overflow: hidden;
 }
 
-/* GRID VISUAL (simulación ciudad) */
+/* GRID tipo ciudad */
 .map::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(#ccc 1px, transparent 1px),
-                      linear-gradient(90deg, #ccc 1px, transparent 1px);
+    background-image: linear-gradient(#bbb 1px, transparent 1px),
+                      linear-gradient(90deg, #bbb 1px, transparent 1px);
     background-size: 40px 40px;
-    opacity: 0.2;
+    opacity: 0.25;
 }
 
 /* PANEL */
@@ -60,7 +60,7 @@ header {
     background: white;
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* BOTÓN */
@@ -73,73 +73,103 @@ button {
     border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(30,136,229,0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(30,136,229,0.4);
 }
 
-/* TEXTO PANEL */
+/* TEXTO */
 .panel p {
-    margin-top: 15px;
+    margin-top: 12px;
     font-size: 15px;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 /* CONTENEDORES */
 .container-dot {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     position: absolute;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    border: 2px solid white;
 }
 
+/* EFECTO HOVER */
 .container-dot:hover {
-    transform: scale(1.15);
+    transform: scale(1.2);
 }
 
-/* COLORES ESTADO */
+/* ESTADOS */
 .green {
-    background: #43a047;
+    background: linear-gradient(135deg, #43a047, #66bb6a);
 }
 
 .yellow {
-    background: #fbc02d;
+    background: linear-gradient(135deg, #fbc02d, #ffeb3b);
+    color: #333;
 }
 
 .red {
-    background: #e53935;
+    background: linear-gradient(135deg, #e53935, #ef5350);
 }
 
 /* TOOLTIP */
 .tooltip {
     position: absolute;
-    bottom: 55px;
-    background: #222;
+    bottom: 60px;
+    background: rgba(0,0,0,0.85);
     color: white;
-    padding: 6px 8px;
+    padding: 6px 10px;
     font-size: 12px;
     border-radius: 6px;
     display: none;
     white-space: nowrap;
+    transform: translateX(-50%);
+    left: 50%;
 }
 
-/* LÍNEAS SVG */
+/* SVG LÍNEAS */
 svg {
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+/* RESULTADOS ANIMADOS */
+#resultado, #lista, #eficiencia {
+    font-weight: bold;
+    animation: fadeIn 0.4s ease;
+}
+
+/* DIVIDER */
+hr {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* RESPONSIVE */
@@ -151,20 +181,8 @@ svg {
     .map {
         height: 350px;
     }
-}
 
-/* ANIMACIÓN RESULTADOS */
-#resultado, #lista, #eficiencia {
-    animation: fadeIn 0.4s ease;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    header {
+        font-size: 18px;
     }
 }
