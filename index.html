@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Simulación de Recolección Inteligente</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+<header>
+    Simulación de Recolección Inteligente
+</header>
+
+<div class="container">
+
+    <!-- MAPA -->
+    <div class="map" id="map">
+        <svg id="lines"></svg>
+    </div>
+
+    <!-- PANEL -->
+    <div class="panel">
+        <button onclick="simular()">Generar simulación</button>
+
+        <p id="resultado">Listo para recolección: 0 contenedores</p>
+        <p id="lista">IDs: -</p>
+        <p id="eficiencia">Eficiencia simulada: 0%</p>
+
+        <hr>
+
+        <p><strong>Total contenedores:</strong> 5</p>
+        <p><strong>Estado:</strong> Simulación inactiva</p>
+    </div>
+
+</div>
+
+<!-- JS -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
