@@ -4,43 +4,70 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Simulación de Recolección Inteligente</title>
+<title>Simulación Inteligente de Recolección</title>
 
-<!-- CSS -->
 <link rel="stylesheet" href="css/styles.css">
-
 </head>
 
 <body>
 
 <header>
-    Simulación de Recolección Inteligente
+    <h1>Simulación de Recolección Inteligente</h1>
+    <p class="subtitulo">Optimización de rutas basada en datos simulados (IoT)</p>
 </header>
 
-<div class="container">
+<main class="container">
 
     <!-- MAPA -->
-    <div class="map" id="map">
-        <svg id="lines"></svg>
-    </div>
+    <section class="map-section">
+        <div class="map" id="map">
+            <svg id="lines"></svg>
+        </div>
+        <p class="map-label">Mapa simulado de contenedores urbanos</p>
+    </section>
 
     <!-- PANEL -->
-    <div class="panel">
+    <aside class="panel">
+
+        <h2>Control de Simulación</h2>
+
         <button onclick="simular()">Generar simulación</button>
 
-        <p id="resultado">Listo para recolección: 0 contenedores</p>
-        <p id="lista">IDs: -</p>
-        <p id="eficiencia">Eficiencia simulada: 0%</p>
+        <div class="resultados">
+
+            <div class="card">
+                <h3>Contenedores prioritarios</h3>
+                <p id="resultado">0</p>
+            </div>
+
+            <div class="card">
+                <h3>IDs seleccionados</h3>
+                <p id="lista">-</p>
+            </div>
+
+            <div class="card">
+                <h3>Eficiencia simulada</h3>
+                <p id="eficiencia">0%</p>
+            </div>
+
+        </div>
 
         <hr>
 
-        <p><strong>Total contenedores:</strong> 5</p>
-        <p><strong>Estado:</strong> Simulación inactiva</p>
-    </div>
+        <div class="info-extra">
+            <p><strong>Total contenedores:</strong> 5</p>
+            <p><strong>Modelo:</strong> Simulación sin datos reales</p>
+            <p><strong>Criterio:</strong> >70% = recolección</p>
+        </div>
 
-</div>
+    </aside>
 
-<!-- JS -->
+</main>
+
+<footer>
+    <p>Demo académico - Ingeniería de Sistemas</p>
+</footer>
+
 <script src="js/script.js"></script>
 
 </body>
