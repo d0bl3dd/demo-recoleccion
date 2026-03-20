@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recetas Responsivas - Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">Cooky<span>.</span></a>
+
+      <!-- checkbox hack menu -->
+      <input id="menu-toggle" type="checkbox" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-btn" aria-label="Abrir menú">
+        <span></span>
+      </label>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#categories">Categorías</a></li>
+          <li><a href="#recipes">Recetas</a></li>
+          <li><a href="#chef">El Chef</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Recetas fáciles y deliciosas<br /><span>para cualquier ocasión</span></h1>
+          <p>Aprende a crear platos increíbles con instrucciones claras y diseños pensados para móvil.</p>
+          <a class="btn" href="#recipes">Ver recetas</a>
+        </div>
+        <div class="hero-art">
+          <div class="card hero-card">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect fill='%23e6f7ff' width='100%' height='100%'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='28' fill='%237ba7b8'>Imagen Banner</text></svg>" alt="Banner ilustración"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="categories" class="section categories">
+      <div class="container">
+        <h2 class="section-title">Categorías</h2>
+        <div class="cats">
+          <button class="chip" data-cat="all">Todas</button>
+          <button class="chip" data-cat="desayuno">Desayuno</button>
+          <button class="chip" data-cat="postre">Postres</button>
+          <button class="chip" data-cat="vegano">Vegano</button>
+          <button class="chip" data-cat="rapido">Rápido</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="recipes" class="section recipes">
+      <div class="container">
+        <h2 class="section-title">Recetas</h2>
+        <div class="recipes-grid" id="recipes-grid">
+          <!-- Cards (examples) -->
+          <article class="recipe-card" data-cat="desayuno">
+            <div class="thumb"><img alt="Tostadas" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='250'><rect fill='%23fff1e6' width='100%' height='100%'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='20' fill='%238b5a3c'>Tostadas</text></svg>"></div>
+            <div class="card-body">
+              <h3>Tostadas con aguacate</h3>
+              <p class="meta">10 min · Desayuno</p>
+              <div class="card-actions">
+                <button class="fav-btn" data-id="r1" aria-pressed="false">♡ Favorito</button>
+                <a href="#" class="btn small">Ver</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="recipe-card" data-cat="postre">
+            <div class="thumb"><img alt="Brownie" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='250'><rect fill='%23fff0f6' width='100%' height='100%'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='20' fill='%23804a6b'>Brownie</text></svg>"></div>
+            <div class="card-body">
+              <h3>Brownie de chocolate</h3>
+              <p class="meta">40 min · Postre</p>
+              <div class="card-actions">
+                <button class="fav-btn" data-id="r2" aria-pressed="false">♡ Favorito</button>
+                <a href="#" class="btn small">Ver</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="recipe-card" data-cat="vegano">
+            <div class="thumb"><img alt="Bowl" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='250'><rect fill='%23eefde6' width='100%' height='100%'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='20' fill='%2376964c'>Bowl Vegano</text></svg>"></div>
+            <div class="card-body">
+              <h3>Bowl de quinoa</h3>
+              <p class="meta">25 min · Vegano</p>
+              <div class="card-actions">
+                <button class="fav-btn" data-id="r3" aria-pressed="false">♡ Favorito</button>
+                <a href="#" class="btn small">Ver</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="recipe-card" data-cat="rapido">
+            <div class="thumb"><img alt="Wrap" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='250'><rect fill='%23f0fff7' width='100%' height='100%'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='20' fill='%235a8f73'>Wrap Rápido</text></svg>"></div>
+            <div class="card-body">
+              <h3>Wrap de pollo</h3>
+              <p class="meta">15 min · Rápido</p>
+              <div class="card-actions">
+                <button class="fav-btn" data-id="r4" aria-pressed="false">♡ Favorito</button>
+                <a href="#" class="btn small">Ver</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="chef" class="section chef">
+      <div class="container chef-grid">
+        <div class="chef-photo card">
+          <img alt="Chef" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect fill='%23eef6ff' width='100%' height='100%'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='20' fill='%23647ea3'>Foto del Chef</text></svg>">
+        </div>
+        <div class="chef-bio">
+          <h3>Chef Mariana</h3>
+          <p>Apasionada por la cocina sencilla y saludable. Comparte recetas con pasos claros y trucos prácticos.</p>
+          <a class="btn" href="#contact">Contactar</a>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h4>Cooky</h4>
+          <p>Recetas pensadas para la vida real.</p>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <nav><a href="#recipes">Recetas</a> · <a href="#categories">Categorías</a> · <a href="#contact">Contacto</a></nav>
+        </div>
+        <div>
+          <h4>Síguenos</h4>
+          <p>@cooky_demo</p>
+        </div>
+      </div>
+      <div class="copyright">© <span id="year"></span> Cooky. Todos los derechos reservados.</div>
+    </footer>
+  </main>
+
+  <script>
+    // Simple JS included inline to handle favorites and category filters.
+    (function(){
+      // year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // favorites using localStorage
+      const favBtns = document.querySelectorAll('.fav-btn');
+      const LS_KEY = 'cooky_favs_v1';
+      const loadFavs = () => JSON.parse(localStorage.getItem(LS_KEY) || '[]');
+      const saveFavs = (arr) => localStorage.setItem(LS_KEY, JSON.stringify(arr));
+      let favs = loadFavs();
+
+      function refreshFavButtons(){
+        favBtns.forEach(btn => {
+          const id = btn.dataset.id;
+          const active = favs.includes(id);
+          btn.textContent = (active ? '♥ Favorito' : '♡ Favorito');
+          btn.setAttribute('aria-pressed', String(active));
+          btn.classList.toggle('is-fav', active);
+        });
+      }
+      favBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = btn.dataset.id;
+          if(!id) return;
+          if(favs.includes(id)) favs = favs.filter(x=>x!==id);
+          else favs.push(id);
+          saveFavs(favs);
+          refreshFavButtons();
+        });
+      });
+      refreshFavButtons();
+
+      // category filtering
+      const chips = document.querySelectorAll('.chip');
+      const cards = document.querySelectorAll('.recipe-card');
+
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          const cat = chip.dataset.cat;
+          chips.forEach(c=>c.classList.remove('active'));
+          chip.classList.add('active');
+          cards.forEach(card => {
+            card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+          });
+        });
+      });
+
+      // accessible menu: close menu on nav click (for small screens)
+      document.querySelectorAll('.nav a').forEach(a => {
+        a.addEventListener('click', () => {
+          const menuToggle = document.getElementById('menu-toggle');
+          if(menuToggle.checked) menuToggle.checked = false;
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
